@@ -16,7 +16,7 @@ const CollectionSection = () => {
       <h2>Bộ Sưu Tập</h2> {/* Collection Title in Vietnamese */}
       <div className={styles.productList}>
         {jewelryData.map((item) => (
-          <ProductCard key={item.id} item={item} />
+          <ProductCard key={item.id} product={item} />
         ))}
       </div>
     </section>

@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "Nhẫn Kim Cương Tự Nhiên",
+    "description": "Nhẫn kim cương tự nhiên 18K với thiết kế tinh xảo, phù hợp cho các dịp đặc biệt",
+    "price": "15,000,000 VNĐ",
+    "imageUrl": "https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=400&h=400&fit=crop"
+  },
+  {
+    "id": 2,
+    "name": "Dây Chuyền Vàng 24K",
+    "description": "Dây chuyền vàng 24K với họa tiết truyền thống Việt Nam, mang lại vẻ đẹp sang trọng",
+    "price": "8,500,000 VNĐ",
+    "imageUrl": "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400&h=400&fit=crop"
+  },
+  {
+    "id": 3,
+    "name": "Bông Tai Ngọc Trai",
+    "description": "Bông tai ngọc trai tự nhiên với viền vàng 18K, tạo nên vẻ đẹp thanh lịch và quý phái",
+    "price": "3,200,000 VNĐ",
+    "imageUrl": "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=400&h=400&fit=crop"
+  },
+  {
+    "id": 4,
+    "name": "Vòng Tay Bạc 925",
+    "description": "Vòng tay bạc 925 với thiết kế hiện đại, phù hợp cho mọi lứa tuổi và phong cách",
+    "price": "1,800,000 VNĐ",
+    "imageUrl": "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400&h=400&fit=crop"
+  },
+  {
+    "id": 5,
+    "name": "Lắc Chân Vàng 18K",
+    "description": "Lắc chân vàng 18K với chuông nhỏ tinh tế, tạo âm thanh duyên dáng khi di chuyển",
+    "price": "4,500,000 VNĐ",
+    "imageUrl": "https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=400&h=400&fit=crop"
+  },
+  {
+    "id": 6,
+    "name": "Mặt Dây Chuyền Ruby",
+    "description": "Mặt dây chuyền ruby tự nhiên với viền vàng 18K, mang lại may mắn và tài lộc",
+    "price": "12,000,000 VNĐ",
+    "imageUrl": "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=400&h=400&fit=crop"
+  },
+  {
+    "id": 7,
+    "name": "Nhẫn Cưới Vàng Trắng",
+    "description": "Nhẫn cưới vàng trắng 18K với thiết kế đơn giản nhưng sang trọng, biểu tượng của tình yêu vĩnh cửu",
+    "price": "6,800,000 VNĐ",
+    "imageUrl": "https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=400&h=400&fit=crop"
+  },
+  {
+    "id": 8,
+    "name": "Bộ Trang Sức Sapphire",
+    "description": "Bộ trang sức sapphire xanh dương với vàng 18K, bao gồm nhẫn, dây chuyền và bông tai",
+    "price": "25,000,000 VNĐ",
+    "imageUrl": "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400&h=400&fit=crop"
+  }
+] 

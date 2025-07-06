@@ -4,26 +4,21 @@ import AboutSection from './components/AboutSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import CollectionSection from './components/CollectionSection';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
     <BrowserRouter>
- <div className="App">
-      <Header />
- <Switch>
- <Route path="/about">
- <AboutSection />
- </Route>
- <Route path="/collections">
- <CollectionSection />
- </Route>
- <Route path="/contact">
- <ContactSection />
- </Route>
- </Switch>
-      <Footer />
-    </div>
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route path="/" element={<AboutSection />} />
+          <Route path="/about" element={<AboutSection />} />
+          <Route path="/collection" element={<CollectionSection />} />
+          <Route path="/contact" element={<ContactSection />} />
+        </Routes>
+        <Footer />
+      </div>
     </BrowserRouter>
   );
 }
