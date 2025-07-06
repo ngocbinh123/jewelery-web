@@ -2,7 +2,7 @@ import React from 'react';
 import { Layout, Menu } from 'antd';
 import './Header.css'; // We'll create this file for custom styles
 import { Link } from 'react-router-dom';
-import logo from '../assets/logo.png'; // Assuming the logo is in assets folder
+import logo from '../assets/logo.png'; // Logo is in the root assets folder
 import styles from './Header.module.css';
 
 const { Header: AntHeader } = Layout;
