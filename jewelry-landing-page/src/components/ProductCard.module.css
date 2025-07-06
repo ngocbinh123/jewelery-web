@@ -1,0 +1,32 @@
+.productCard {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin: 10px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.productCard img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.productCard h3 {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.productCard p {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.productCard .price {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #000; /* Or a color that fits the jewelry theme */
+}
