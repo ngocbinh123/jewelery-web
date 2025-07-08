@@ -4,6 +4,7 @@ import {
   HeroSection,
   CollectionsSection,
   BestSellerSection,
+  NewArrivalSection,
   CategorySection,
   TestimonialSection,
   BrandSection
@@ -27,6 +28,7 @@ const Homepage = React.memo(() => {
       <HeroSection />
       <CollectionsSection />
       <BestSellerSection />
+      <NewArrivalSection />
       <CategorySection />
       <TestimonialSection />
       <BrandSection />
