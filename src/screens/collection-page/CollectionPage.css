@@ -1,0 +1,198 @@
+.collection-page {
+  min-height: 100vh;
+  background-color: #fafafa;
+}
+
+.collection-page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Layout Styles */
+.collection-layout {
+  background: transparent;
+  min-height: 600px;
+}
+
+.collection-sidebar {
+  background: transparent;
+  padding-right: 1.5rem;
+}
+
+.collection-content-layout {
+  background: transparent;
+}
+
+.collection-content {
+  background: transparent;
+  padding: 0;
+}
+
+/* Desktop Sidebar */
+.desktop-sidebar {
+  display: block;
+}
+
+.desktop-sidebar .ant-layout-sider-children {
+  background: transparent;
+  padding: 0;
+}
+
+/* Mobile Filter Drawer */
+.mobile-filter-drawer .ant-drawer-body {
+  padding: 16px;
+  background: #fafafa;
+}
+
+.mobile-filter-drawer .ant-drawer-header {
+  border-bottom: 1px solid #f0f0f0;
+  background: white;
+}
+
+.mobile-filter-drawer .ant-drawer-title {
+  font-weight: 600;
+  color: #2c2c2c;
+}
+
+/* Mobile Float Buttons */
+.mobile-float-buttons {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1000;
+}
+
+.filter-float-btn,
+.back-top-btn {
+  background: #d4af37 !important;
+  color: white !important;
+  border: none !important;
+}
+
+.filter-float-btn:hover,
+.back-top-btn:hover {
+  background: #b8941f !important;
+  transform: scale(1.05);
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+  .collection-page-container {
+    padding: 0 1rem;
+  }
+  
+  /* Hide desktop sidebar on mobile */
+  .desktop-sidebar {
+    display: none !important;
+  }
+  
+  .collection-layout {
+    margin: 0;
+  }
+  
+  .collection-content {
+    padding: 0;
+  }
+  
+  /* Show mobile float buttons */
+  .mobile-float-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+@media (min-width: 769px) {
+  /* Hide mobile float buttons on desktop */
+  .mobile-float-buttons {
+    display: none;
+  }
+  
+  /* Show desktop sidebar */
+  .desktop-sidebar {
+    display: block !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .collection-page-container {
+    padding: 0 0.5rem;
+  }
+  
+  .mobile-float-buttons {
+    bottom: 16px;
+    right: 16px;
+  }
+  
+  .filter-float-btn .ant-float-btn-body,
+  .back-top-btn .ant-float-btn-body {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* Ant Design Layout Overrides */
+.collection-layout .ant-layout-sider {
+  background: transparent;
+}
+
+.collection-layout .ant-layout-content {
+  background: transparent;
+}
+
+/* Loading and Error States */
+.collection-page .ant-spin-container {
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.collection-page .ant-empty {
+  margin: 2rem 0;
+}
+
+/* Smooth transitions */
+.collection-layout,
+.collection-content,
+.collection-sidebar {
+  transition: all 0.3s ease;
+}
+
+/* Accessibility improvements */
+.filter-float-btn:focus,
+.back-top-btn:focus {
+  outline: 2px solid rgba(212, 175, 55, 0.3);
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .collection-page {
+    background-color: white;
+  }
+  
+  .filter-float-btn,
+  .back-top-btn {
+    background: #000 !important;
+    border: 2px solid #000 !important;
+  }
+}
+
+/* Print styles */
+@media print {
+  .mobile-float-buttons,
+  .desktop-sidebar {
+    display: none !important;
+  }
+  
+  .collection-page {
+    background: white;
+  }
+  
+  .collection-page-container {
+    max-width: none;
+    padding: 0;
+  }
+} 

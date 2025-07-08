@@ -9,6 +9,7 @@ import Navigation from '../Navigation';
 import { colors, spacing, typography } from '../../design-tokens';
 import { RightOutlined, LeftOutlined } from '@ant-design/icons';
 import { Menu, Tabs } from 'antd';
+import { Link } from 'react-router-dom';
 // import Navigation from '../Navigation';
 
 const colorKeys = Object.keys(colors);
@@ -186,7 +187,12 @@ const DSDashboardScreen = () => {
       </div>
       {/* Main Content with Tabs */}
       <div style={{ flex: 1, padding: 32 }}>
-        <Heading level={1} style={{ marginBottom: 24 }}>Design System Dashboard</Heading>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 24 }}>
+          <Heading level={1} style={{ marginBottom: 0 }}>Design System Dashboard</Heading>
+          <Link to="/contact">
+            <Button type="primary">Liên hệ</Button>
+          </Link>
+        </div>
         <Tabs
           activeKey={activeKey}
           onChange={setActiveKey}

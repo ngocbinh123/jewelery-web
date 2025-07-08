@@ -1,0 +1,122 @@
+.collection-header {
+  background: linear-gradient(135deg, #f8f4f0 0%, #e8d5c4 100%);
+  padding: 2rem 0 3rem;
+  margin-bottom: 2rem;
+}
+
+.collection-header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.collection-breadcrumb {
+  margin-bottom: 1.5rem;
+}
+
+.collection-breadcrumb .ant-breadcrumb-link {
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+.collection-breadcrumb .ant-breadcrumb-link:hover {
+  color: #d4af37;
+}
+
+.collection-breadcrumb .ant-breadcrumb-separator {
+  color: #999;
+}
+
+.collection-header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.collection-title-section {
+  flex: 1;
+  min-width: 0;
+}
+
+.collection-title {
+  color: #2c2c2c !important;
+  font-weight: 700 !important;
+  margin-bottom: 0.5rem !important;
+  font-size: clamp(2rem, 4vw, 3rem) !important;
+  line-height: 1.2 !important;
+}
+
+.collection-subtitle {
+  color: #666 !important;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.collection-meta {
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.product-count {
+  color: #888 !important;
+  font-size: 1rem;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .collection-header {
+    padding: 1.5rem 0 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .collection-header-container {
+    padding: 0 1rem;
+  }
+  
+  .collection-header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .collection-meta {
+    text-align: left;
+    width: 100%;
+  }
+  
+  .collection-title {
+    font-size: 2rem !important;
+  }
+  
+  .collection-subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .collection-header {
+    padding: 1rem 0 1.5rem;
+  }
+  
+  .collection-breadcrumb {
+    margin-bottom: 1rem;
+  }
+  
+  .collection-title {
+    font-size: 1.8rem !important;
+  }
+  
+  .product-count {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+} 
