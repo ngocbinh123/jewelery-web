@@ -1,0 +1,125 @@
+.collections-section {
+  padding: 6rem 0;
+  background: #ffffff;
+}
+
+.collections-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.collections-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  grid-template-rows: auto auto;
+}
+
+.collection-item {
+  background: #ffffff;
+  border-radius: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.collection-item.large {
+  grid-row: span 2;
+}
+
+.collection-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.collection-image {
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(135deg, #f8f4f0 0%, #e8d5c4 100%);
+}
+
+.collection-item.large .collection-image {
+  height: 620px;
+}
+
+.collection-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(5px);
+}
+
+.collection-icon {
+  font-size: 4rem;
+  opacity: 0.8;
+  filter: grayscale(20%);
+}
+
+.collection-content {
+  padding: 2rem;
+  text-align: center;
+}
+
+.collection-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c2c2c;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.collection-description {
+  color: #666;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.collection-cta {
+  background: transparent;
+  color: #2c2c2c;
+  border: 2px solid #2c2c2c;
+  padding: 0.8rem 2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 0;
+}
+
+.collection-cta:hover {
+  background: #2c2c2c;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .collections-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .collection-item.large {
+    grid-row: span 1;
+  }
+  
+  .collection-item.large .collection-image {
+    height: 300px;
+  }
+  
+  .collection-content {
+    padding: 1.5rem;
+  }
+  
+  .collection-name {
+    font-size: 1.3rem;
+  }
+} 

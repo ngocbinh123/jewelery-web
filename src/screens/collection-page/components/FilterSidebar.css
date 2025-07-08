@@ -1,0 +1,215 @@
+.filter-sidebar {
+  background: transparent;
+}
+
+.filter-card {
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.filter-card .ant-card-head {
+  padding: 12px 16px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.filter-card .ant-card-head-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #2c2c2c;
+}
+
+.filter-card .ant-card-body {
+  padding: 16px;
+}
+
+.filter-radio-group {
+  width: 100%;
+}
+
+.filter-radio-group .ant-radio-wrapper {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.filter-radio-group .ant-radio-wrapper:last-child {
+  margin-bottom: 0;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+/* Price Range Styles */
+.price-slider-container {
+  width: 100%;
+}
+
+.price-range-display {
+  margin-top: 12px;
+  text-align: center;
+}
+
+.price-text {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.quick-price-buttons {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.quick-price-btn {
+  font-size: 0.85rem;
+  height: auto;
+  padding: 6px 12px;
+  border-radius: 4px;
+  text-align: left;
+  justify-content: flex-start;
+}
+
+.quick-price-btn.ant-btn-primary {
+  background: #d4af37;
+  border-color: #d4af37;
+}
+
+.quick-price-btn.ant-btn-primary:hover {
+  background: #b8941f;
+  border-color: #b8941f;
+}
+
+/* Clear filters button */
+.clear-filters-btn {
+  margin-top: 8px;
+  border-color: #d9d9d9;
+  color: #666;
+  font-weight: 500;
+}
+
+.clear-filters-btn:hover {
+  border-color: #d4af37;
+  color: #d4af37;
+}
+
+/* Custom checkbox styles */
+.ant-checkbox-wrapper {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.ant-checkbox-wrapper:last-child {
+  margin-bottom: 0;
+}
+
+.ant-checkbox-checked .ant-checkbox-inner {
+  background-color: #d4af37;
+  border-color: #d4af37;
+}
+
+.ant-checkbox:hover .ant-checkbox-inner {
+  border-color: #d4af37;
+}
+
+/* Select styles */
+.ant-select:not(.ant-select-disabled):hover .ant-select-selector {
+  border-color: #d4af37;
+}
+
+.ant-select-focused .ant-select-selector {
+  border-color: #d4af37 !important;
+  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2) !important;
+}
+
+/* Input styles */
+.ant-input:focus,
+.ant-input-focused {
+  border-color: #d4af37;
+  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
+}
+
+/* Slider styles */
+.ant-slider-track {
+  background-color: #d4af37;
+}
+
+.ant-slider-handle {
+  border: 2px solid #d4af37;
+}
+
+.ant-slider-handle:hover {
+  border-color: #b8941f;
+}
+
+.ant-slider-handle:focus {
+  border-color: #b8941f;
+  box-shadow: 0 0 0 5px rgba(212, 175, 55, 0.2);
+}
+
+/* Radio button styles */
+.ant-radio-checked .ant-radio-inner {
+  border-color: #d4af37;
+  background-color: #d4af37;
+}
+
+.ant-radio:hover .ant-radio-inner {
+  border-color: #d4af37;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .filter-sidebar {
+    background: white;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+  
+  .filter-card {
+    margin-bottom: 16px;
+  }
+  
+  .filter-card .ant-card-head {
+    padding: 8px 12px;
+  }
+  
+  .filter-card .ant-card-body {
+    padding: 12px;
+  }
+  
+  .quick-price-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  
+  .quick-price-btn {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .filter-sidebar {
+    padding: 12px;
+  }
+  
+  .filter-card .ant-card-head-title {
+    font-size: 0.9rem;
+  }
+  
+  .price-text {
+    font-size: 0.85rem;
+  }
+  
+  .quick-price-buttons {
+    grid-template-columns: 1fr;
+  }
+} 

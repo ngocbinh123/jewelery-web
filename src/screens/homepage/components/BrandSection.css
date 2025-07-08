@@ -1,0 +1,75 @@
+.brand-section {
+  padding: 4rem 0;
+  background: #f8f8f8;
+}
+
+.brand-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.brand-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+  align-items: center;
+}
+
+.brand-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 0;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  height: 100px;
+}
+
+.brand-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.brand-logo {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand-placeholder {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #666;
+  text-align: center;
+  letter-spacing: 2px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.brand-item:hover .brand-placeholder {
+  opacity: 1;
+  color: #2c2c2c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .brand-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+  
+  .brand-item {
+    height: 80px;
+    padding: 1rem;
+  }
+  
+  .brand-placeholder {
+    font-size: 1rem;
+  }
+} 

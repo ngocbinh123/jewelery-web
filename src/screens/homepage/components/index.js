@@ -1,0 +1,7 @@
+export { default as HeroSection } from './HeroSection';
+export { default as CollectionsSection } from './CollectionsSection';
+export { default as BestSellerSection } from './BestSellerSection';
+export { default as CategorySection } from './CategorySection';
+export { default as TestimonialSection } from './TestimonialSection';
+export { default as BrandSection } from './BrandSection';
+export { default as ProductGrid } from './ProductGrid'; 
