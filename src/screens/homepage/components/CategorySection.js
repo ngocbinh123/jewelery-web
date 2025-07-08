@@ -1,5 +1,6 @@
 import React from 'react';
 import './CategorySection.css';
+import { motion } from 'framer-motion';
 
 const CategorySection = React.memo(() => {
   const categories = [
@@ -12,7 +13,12 @@ const CategorySection = React.memo(() => {
 
   return (
     <section className="category-section">
-      <div className="category-container">
+      <motion.div
+        className="category-container"
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
+      >
         <div className="section-header">
           <h2 className="section-title">Mua sắm theo danh mục</h2>
           <p className="section-subtitle">Khám phá bộ sưu tập đa dạng của chúng tôi</p>
@@ -29,7 +35,7 @@ const CategorySection = React.memo(() => {
             </div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 });

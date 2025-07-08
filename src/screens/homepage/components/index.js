@@ -4,4 +4,5 @@ export { default as BestSellerSection } from './BestSellerSection';
 export { default as CategorySection } from './CategorySection';
 export { default as TestimonialSection } from './TestimonialSection';
 export { default as BrandSection } from './BrandSection';
-export { default as ProductGrid } from './ProductGrid'; 
+export { default as ProductGrid } from './ProductGrid';
+export { default as NewArrivalSection } from './NewArrivalSection'; 

@@ -2,8 +2,9 @@ import React, { Suspense } from 'react';
 import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
 import { Spin } from 'antd';
+import { AnimatePresence, motion } from 'framer-motion';
 
 // Lazy load components for better performance
 const Homepage = React.lazy(() => import('./screens/homepage/Homepage'));
@@ -26,6 +27,66 @@ const LoadingSpinner = () => (
   </div>
 );
 
+function AnimatedRoutes() {
+  const location = useLocation();
+  return (
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route path="/" element={
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -40 }}
+            transition={{ duration: 0.5, ease: 'easeOut' }}
+          >
+            <Homepage />
+          </motion.div>
+        } />
+        <Route path="/about" element={
+          <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -40 }} transition={{ duration: 0.5, ease: 'easeOut' }}>
+            <AboutSection />
+          </motion.div>
+        } />
+        <Route path="/collection" element={
+          <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -40 }} transition={{ duration: 0.5, ease: 'easeOut' }}>
+            <CollectionPage />
+          </motion.div>
+        } />
+        <Route path="/collections/:id" element={
+          <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -40 }} transition={{ duration: 0.5, ease: 'easeOut' }}>
+            <CollectionPage />
+          </motion.div>
+        } />
+        <Route path="/category/:category" element={
+          <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -40 }} transition={{ duration: 0.5, ease: 'easeOut' }}>
+            <CollectionPage />
+          </motion.div>
+        } />
+        <Route path="/contact" element={
+          <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -40 }} transition={{ duration: 0.5, ease: 'easeOut' }}>
+            <ContactDetail />
+          </motion.div>
+        } />
+        <Route path="/design-system" element={
+          <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -40 }} transition={{ duration: 0.5, ease: 'easeOut' }}>
+            <DSDashboardScreen />
+          </motion.div>
+        } />
+        <Route path="/product/:id" element={
+          <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -40 }} transition={{ duration: 0.5, ease: 'easeOut' }}>
+            <ProductDetail />
+          </motion.div>
+        } />
+        <Route path="*" element={
+          <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -40 }} transition={{ duration: 0.5, ease: 'easeOut' }}>
+            <NotFound />
+          </motion.div>
+        } />
+      </Routes>
+    </AnimatePresence>
+  );
+}
+
 function App() {
   return (
     <BrowserRouter>
@@ -33,17 +94,7 @@ function App() {
         <Header />
         <main className="main-content">
           <Suspense fallback={<LoadingSpinner />}>
-            <Routes>
-              <Route path="/" element={<Homepage />} />
-              <Route path="/about" element={<AboutSection />} />
-              <Route path="/collection" element={<CollectionPage />} />
-              <Route path="/collections/:id" element={<CollectionPage />} />
-              <Route path="/category/:category" element={<CollectionPage />} />
-              <Route path="/contact" element={<ContactDetail />} />
-              <Route path="/design-system" element={<DSDashboardScreen />} />
-              <Route path="/product/:id" element={<ProductDetail />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
+            <AnimatedRoutes />
           </Suspense>
         </main>
         <Footer />
