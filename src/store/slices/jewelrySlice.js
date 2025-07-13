@@ -1,13 +1,18 @@
 import { createSlice } from '@reduxjs/toolkit';
-import jewelryData from '../../data/jewelery-data.json';
+import homepageData from '../../data/jewelery-data.json';
+import productData from '../../data/product-data.json';
 
 const initialState = {
-  hero: jewelryData.hero,
-  collections: jewelryData.collections,
-  products: jewelryData.products,
-  testimonials: jewelryData.testimonials,
-  brands: jewelryData.brands,
-  contact: jewelryData.contact,
+  hero: homepageData.hero,
+  collections: homepageData.collections,
+  testimonials: homepageData.testimonials,
+  brands: homepageData.brands,
+  contact: homepageData.contact,
+  // All products from product-data.json
+  products: productData.products,
+  // Homepage product references (IDs)
+  bestSellerProductIds: homepageData.bestSellerProductIds || [],
+  newArrivalProductIds: homepageData.newArrivalProductIds || [],
   loading: false,
   error: null,
   filters: {
@@ -50,6 +55,12 @@ export const selectTestimonials = (state) => state.jewelry.testimonials;
 export const selectBrands = (state) => state.jewelry.brands;
 export const selectContact = (state) => state.jewelry.contact;
 export const selectFilters = (state) => state.jewelry.filters;
+export const selectBestSellerProductIds = (state) => state.jewelry.bestSellerProductIds;
+export const selectBestSellerProducts = (state) => {
+  const allProducts = state.jewelry.products;
+  const ids = state.jewelry.bestSellerProductIds;
+  return ids.map(id => allProducts.find(p => p.id === id)).filter(Boolean);
+};
 
 // Filter products based on criteria
 export const selectFilteredProducts = (state) => {
@@ -89,5 +100,12 @@ export const selectNewProducts = (state) =>
 // Get sale products
 export const selectSaleProducts = (state) => 
   state.jewelry.products.filter(product => product.isSale);
+
+export const selectNewArrivalProductIds = (state) => state.jewelry.newArrivalProductIds;
+export const selectNewArrivalProducts = (state) => {
+  const allProducts = state.jewelry.products;
+  const ids = state.jewelry.newArrivalProductIds;
+  return ids.map(id => allProducts.find(p => p.id === id)).filter(Boolean);
+};
 
 export default jewelrySlice.reducer; 
