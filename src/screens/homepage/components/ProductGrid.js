@@ -16,13 +16,22 @@ const ProductGrid = React.memo(({ products }) => {
         <Link key={product.id} to={`/product/${product.id}`} className="product-card-link">
           <div className="product-card">
             <div className="product-image">
-              <div className="product-image-placeholder">
-                <span className="product-icon">
-                  {product.type === 'ring' ? '💍' : 
-                   product.type === 'necklace' ? '📿' : 
-                   product.type === 'earring' ? '💎' : '⭕'}
-                </span>
-              </div>
+              {product.image ? (
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="product-img"
+                  loading="lazy"
+                />
+              ) : (
+                <div className="product-image-placeholder">
+                  <span className="product-icon">
+                    {product.type === 'ring' ? '💍' : 
+                     product.type === 'necklace' ? '📿' : 
+                     product.type === 'earring' ? '💎' : '⭕'}
+                  </span>
+                </div>
+              )}
               {product.isNew && <span className="product-badge new-badge">Mới</span>}
               {product.isSale && <span className="product-badge sale-badge">Giảm giá</span>}
               <div className="product-overlay">

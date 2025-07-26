@@ -5,7 +5,7 @@ import {
   CollectionsSection,
   BestSellerSection,
   NewArrivalSection,
-  CategorySection,
+  HighlightSection,
   TestimonialSection,
   BrandSection
 } from './components';
@@ -29,7 +29,7 @@ const Homepage = React.memo(() => {
       <CollectionsSection />
       <BestSellerSection />
       <NewArrivalSection />
-      <CategorySection />
+      <HighlightSection />
       <TestimonialSection />
       <BrandSection />
     </div>

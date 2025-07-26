@@ -2,8 +2,8 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { selectBestSellerProducts } from '../../../store/slices/jewelrySlice';
 import ProductGrid from './ProductGrid';
-import './BestSellerSection.css';
 import { motion } from 'framer-motion';
+import './BestSellerSection.css';
 
 const BestSellerSection = React.memo(() => {
   const bestSellerProducts = useSelector(selectBestSellerProducts);
@@ -20,9 +20,7 @@ const BestSellerSection = React.memo(() => {
           <h2 className="section-title">Bán chạy nhất</h2>
           <p className="section-subtitle">Khám phá các sản phẩm được yêu thích nhất</p>
         </div>
-        
         <ProductGrid products={bestSellerProducts} />
-        
         <div className="section-actions">
           <button className="view-all-button">Xem tất cả</button>
         </div>
