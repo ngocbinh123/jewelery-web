@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { selectNewArrivalProducts } from '../../../store/slices/jewelrySlice';
 import ProductGrid from './ProductGrid';
 import { motion } from 'framer-motion';
-import './BestSellerSection.css'; // Reuse styles for consistency
+import './BestSellerSection.css';
 
 const NewArrivalSection = React.memo(() => {
   const newArrivals = useSelector(selectNewArrivalProducts);

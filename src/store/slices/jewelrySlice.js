@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import homepageData from '../../data/jewelery-data.json';
-import productData from '../../data/product-data.json';
+// import productData from '../../data/product-data.json';
 
 const initialState = {
   hero: homepageData.hero,
@@ -8,9 +8,8 @@ const initialState = {
   testimonials: homepageData.testimonials,
   brands: homepageData.brands,
   contact: homepageData.contact,
-  // All products from product-data.json
-  products: productData.products,
-  // Homepage product references (IDs)
+  // Use only products from jewelery-data.json
+  products: homepageData.products,
   bestSellerProductIds: homepageData.bestSellerProductIds || [],
   newArrivalProductIds: homepageData.newArrivalProductIds || [],
   loading: false,
@@ -107,5 +106,7 @@ export const selectNewArrivalProducts = (state) => {
   const ids = state.jewelry.newArrivalProductIds;
   return ids.map(id => allProducts.find(p => p.id === id)).filter(Boolean);
 };
+
+export const selectHighlightProducts = (state) => state.jewelry.products;
 
 export default jewelrySlice.reducer; 
