@@ -1,70 +1,208 @@
-# Getting Started with Create React App
+# Ngọc Hải Đường - Jewelry E-commerce Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive jewelry e-commerce website built with React, featuring jade bracelets and premium jewelry products.
 
-## Available Scripts
+## 🚀 Live Demo
 
-In the project directory, you can run:
+**Website**: https://jewelery-web-51890.web.app
 
-### `npm start`
+## 🛠️ Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Frontend**: React 19.1.0
+- **State Management**: Redux Toolkit
+- **UI Library**: Ant Design
+- **Routing**: React Router DOM
+- **Animations**: Framer Motion
+- **Backend**: Firebase
+- **Hosting**: Firebase Hosting
+- **Analytics**: Firebase Analytics
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📦 Firebase Integration
 
-### `npm test`
+This project is fully integrated with Firebase services:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Firebase Hosting**: Live website deployment
+- **Firebase Analytics**: User behavior tracking
+- **Firestore**: Database (ready for implementation)
+- **Firebase Auth**: Authentication (ready for implementation)
+- **Firebase Storage**: File storage (ready for implementation)
 
-### `npm run build`
+## 🚀 Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Node.js (v18 or higher)
+- npm or yarn
+- Firebase CLI
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Installation
 
-### `npm run eject`
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd jewelery-web
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. **Start development server**
+   ```bash
+   npm start
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. **Open your browser**
+   Navigate to `http://localhost:3000`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🚀 Deployment
 
-## Learn More
+### Firebase Setup
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. **Install Firebase CLI** (if not already installed)
+   ```bash
+   npm install -g firebase-tools
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. **Login to Firebase**
+   ```bash
+   firebase login
+   ```
 
-### Code Splitting
+3. **Build the project**
+   ```bash
+   npm run build
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4. **Deploy to Firebase**
+   ```bash
+   npm run deploy
+   ```
+   
+   Or deploy only hosting:
+   ```bash
+   npm run deploy:hosting
+   ```
 
-### Analyzing the Bundle Size
+### Manual Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+# Build the project
+npm run build
 
-### Making a Progressive Web App
+# Deploy to Firebase
+firebase deploy --only hosting
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 📁 Project Structure
 
-### Advanced Configuration
+```
+src/
+├── components/          # Reusable UI components
+├── screens/            # Page components
+│   ├── homepage/       # Homepage components
+│   ├── collection-page/ # Collection page
+│   └── product-detail/ # Product detail page
+├── store/              # Redux store and slices
+├── firebase/           # Firebase configuration and services
+│   ├── config.js       # Firebase initialization
+│   └── services.js     # Firebase service functions
+├── data/               # Static data (JSON files)
+└── design-system/      # Design system components
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🔧 Available Scripts
 
-### Deployment
+- `npm start` - Start development server
+- `npm run build` - Build for production
+- `npm run test` - Run tests
+- `npm run deploy` - Build and deploy to Firebase
+- `npm run deploy:hosting` - Deploy only hosting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🌟 Features
 
-### `npm run build` fails to minify
+### Homepage
+- **Hero Section**: Showcases featured jade bracelets
+- **Best Seller Section**: Displays popular products
+- **New Arrivals Section**: Shows latest products
+- **Featured Products Section**: Complete product catalog
+- **Testimonials Section**: Customer reviews
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Collection Page
+- **Advanced Filtering**: Search, price range, material, etc.
+- **Sorting Options**: Name, price, newest, rating
+- **Grid/List View**: Toggle between view modes
+- **Pagination**: Efficient product browsing
+
+### Product Detail Page
+- **Product Images**: High-quality product photos
+- **Detailed Information**: Specifications, materials, pricing
+- **Related Products**: Similar product suggestions
+
+### Navigation
+- **Responsive Design**: Works on all devices
+- **Smooth Animations**: Enhanced user experience
+- **SEO Optimized**: Proper meta tags and structure
+
+## 🔥 Firebase Services
+
+### Current Implementation
+- ✅ **Firebase Hosting**: Live website deployment
+- ✅ **Firebase Analytics**: User tracking
+- ✅ **Firebase Config**: Proper initialization
+
+### Ready for Implementation
+- 🔄 **Firestore**: Replace static JSON data
+- 🔄 **Firebase Auth**: User authentication
+- 🔄 **Firebase Storage**: Product image storage
+- 🔄 **Firebase Functions**: Backend API
+
+## 📊 Analytics
+
+Firebase Analytics is integrated and tracking:
+- Page views
+- User interactions
+- Product views
+- Navigation patterns
+
+## 🔒 Security
+
+- Firebase security rules ready for implementation
+- Environment variables for sensitive data
+- HTTPS enforced on production
+
+## 📱 Responsive Design
+
+The website is fully responsive and optimized for:
+- Desktop (1200px+)
+- Tablet (768px - 1199px)
+- Mobile (320px - 767px)
+
+## 🎨 Design System
+
+- Consistent color palette
+- Typography hierarchy
+- Component library
+- Spacing system
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+## 📞 Contact
+
+For any questions or support, please contact the development team.
+
+---
+
+**Live Website**: https://jewelery-web-51890.web.app
+**Firebase Console**: https://console.firebase.google.com/project/jewelery-web-51890/overview

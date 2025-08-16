@@ -9,6 +9,7 @@
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^13.5.0",
     "antd": "^5.26.3",
+    "firebase": "^12.1.0",
     "framer-motion": "^12.23.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
@@ -21,7 +22,18 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "npm run build && firebase deploy",
+    "deploy:hosting": "firebase deploy --only hosting",
+    "deploy:script": "./scripts/deploy_firebase.sh",
+    "deploy:script:win": "scripts\\deploy_firebase.bat",
+    "deploy:check": "./scripts/deploy_firebase.sh --check-only",
+    "deploy:build": "./scripts/deploy_firebase.sh --build-only",
+    "release": "./scripts/create_release.sh",
+    "release:workflow": "./scripts/release_workflow.sh",
+    "release:tag": "./scripts/create_tag.sh",
+    "release:force": "./scripts/create_release.sh --force",
+    "release:workflow:force": "./scripts/release_workflow.sh --force"
   },
   "eslintConfig": {
     "extends": [

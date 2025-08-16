@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
 import { Spin } from 'antd';
 import { AnimatePresence, motion } from 'framer-motion';
+import './firebase/config'; // Initialize Firebase
 
 // Lazy load components for better performance
 const Homepage = React.lazy(() => import('./screens/homepage/Homepage'));
