@@ -40,13 +40,6 @@ const FilterSidebar = React.memo(({
   
   // Memoized filter options to prevent unnecessary re-renders
   const filterOptions = useMemo(() => ({
-    categories: [
-      { value: 'all', label: 'Tất cả' },
-      { value: 'ring', label: 'Nhẫn' },
-      { value: 'necklace', label: 'Dây chuyền' },
-      { value: 'earring', label: 'Bông tai' },
-      { value: 'bracelet', label: 'Lắc tay' }
-    ],
     materials: [
       { value: 'all', label: 'Tất cả chất liệu' },
       { value: 'gold', label: 'Vàng' },
@@ -98,26 +91,7 @@ const FilterSidebar = React.memo(({
         />
       </Card>
 
-      {/* Category Filter */}
-      <Card 
-        title="Danh mục" 
-        className="filter-card"
-        size="small"
-      >
-        <Radio.Group
-          value={filters.category}
-          onChange={(e) => handleFilterChange('category', e.target.value)}
-          className="filter-radio-group"
-        >
-          <Space direction="vertical" className="w-100">
-            {filterOptions.categories.map(option => (
-              <Radio key={option.value} value={option.value}>
-                {option.label}
-              </Radio>
-            ))}
-          </Space>
-        </Radio.Group>
-      </Card>
+
 
       {/* Collection Filter */}
       <Card 

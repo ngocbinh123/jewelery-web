@@ -62,6 +62,21 @@ function AnimatedRoutes() {
             <CollectionPage />
           </motion.div>
         } />
+        <Route path="/best-seller" element={
+          <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -40 }} transition={{ duration: 0.5, ease: 'easeOut' }}>
+            <CollectionPage />
+          </motion.div>
+        } />
+        <Route path="/new-arrivals" element={
+          <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -40 }} transition={{ duration: 0.5, ease: 'easeOut' }}>
+            <CollectionPage />
+          </motion.div>
+        } />
+        <Route path="/featured-products" element={
+          <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -40 }} transition={{ duration: 0.5, ease: 'easeOut' }}>
+            <CollectionPage />
+          </motion.div>
+        } />
         <Route path="/contact" element={
           <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -40 }} transition={{ duration: 0.5, ease: 'easeOut' }}>
             <ContactDetail />

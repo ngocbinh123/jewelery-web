@@ -20,7 +20,6 @@ const ProductList = React.memo(({
   className = "",
   onProductClick,
   onQuickView,
-  onAddToCart,
   onPageChange,
   onPageSizeChange
 }) => {
@@ -110,7 +109,6 @@ const ProductList = React.memo(({
                 viewMode={viewMode}
                 onProductClick={onProductClick}
                 onQuickView={onQuickView}
-                onAddToCart={onAddToCart}
                 className="product-list-item"
               />
             </Col>

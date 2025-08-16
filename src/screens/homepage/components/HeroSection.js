@@ -15,10 +15,7 @@ const HeroSection = React.memo(() => {
   } = hero;
 
   return (
-    <section
-      className="hero-section"
-      style={backgroundImage ? { backgroundImage: `url(${backgroundImage})` } : {}}
-    >
+    <section className="hero-section">
       <div className="hero-container">
         <motion.div
           className="hero-content"
@@ -36,11 +33,14 @@ const HeroSection = React.memo(() => {
             ) : null}
           </div>
           <div className="hero-image">
-            <div className="hero-image-placeholder">
-              {/* Placeholder for jewelry model image */}
-              <div className="jewelry-showcase">
-                <div className="model-placeholder"></div>
-              </div>
+            <div className="hero-image-container">
+              {backgroundImage && (
+                <img 
+                  src={backgroundImage} 
+                  alt="Vòng Ngọc Phỉ Thúy" 
+                  className="hero-product-image"
+                />
+              )}
             </div>
           </div>
         </motion.div>

@@ -5,6 +5,13 @@
   margin: 2rem 0;
 }
 
+.product-grid-empty {
+  text-align: center;
+  padding: 3rem;
+  color: #666;
+  font-size: 1.1rem;
+}
+
 .product-card {
   background: white;
   border-radius: 0;

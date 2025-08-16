@@ -1,9 +1,9 @@
 {
   "hero": {
-    "title": "Trang sức cao cấp cho phái đẹp",
-    "subtitle": "Khám phá bộ sưu tập mới nhất của chúng tôi",
-    "backgroundImage": "/assets/products//hero-bg.jpg",
-    "ctaText": "Mua ngay",
+    "title": "Vòng Ngọc Phỉ Thúy Cao Cấp",
+    "subtitle": "Khám phá bộ sưu tập vòng cẩm thạch tự nhiên, mang lại vẻ đẹp thanh cao và năng lượng tích cực",
+    "backgroundImage": "/assets/products/product_00003.jpeg",
+    "ctaText": "Khám phá ngay",
     "ctaLink": "/collection"
   },
   "collections": [
@@ -62,7 +62,7 @@
       "size": "Ni 56.3mm",
       "sku": "JADE-P02",
       "tags": ["cẩm thạch", "vòng tay", "phong thủy", "type A", "trắng xám"],
-      "description": "Sản phẩm là một chiếc vòng tay cẩm thạch tự nhiên loại A, được chứng nhận bởi trung tâm kiểm định uy tín Liulab. Chiếc vòng nổi bật với gam màu \"Lục Xám Nhạt - Trắng Xám\" vô cùng trang nhã và tinh tế, gợi cảm giác thư thái và bình yên như một bức tranh thủy mặc. Vẻ đẹp trầm lắng và trí tuệ của nó phù hợp với những ai yêu thích phong cách tối giản nhưng không kém phần sang trọng. Kích thước ni 56.3mm là một kích thước khá phổ biến, vừa vặn với những người có cổ tay cỡ trung bình. Trong ngũ hành, màu xám và trắng thuộc hành Kim, do đó chiếc vòng này sẽ là vật phẩm hộ mệnh tuyệt vời cho người mệnh Kim và người mệnh Thủy (do Kim sinh Thủy). Đây là một món phụ kiện đa dụng, dễ dàng kết hợp với nhiều loại trang phục, từ công sở đến dạo phố.",
+      "description": "Sản phẩm là một chiếc vòng tay cẩm thạch tự nhiên loại A, được chứng nhận bởi trung tâm kiểm định uy tín Liulab. Chiếc vòng nổi bật với gam màu \"Lục Xám Nhạt - Trắng Xám\" vô cùng trang nhã và tinh tế, gợi cảm giác thư thái và bình yên như một bức tranh thủy mặc. Vẻ đẹp trầm lắng và trí tuệ của nó phù hợp với những ai yêu thích phong cách tối giản nhưng không kém phần sang trọng. Kích thước ni 56.3mm là một kích thước khá phổ biến, vừa vặn với những người có cổ tay cỡ trung bình. Trong ngũ hành, màu xanh và trắng thuộc hành Kim, do đó chiếc vòng này sẽ là vật phẩm hộ mệnh tuyệt vời cho người mệnh Kim và người mệnh Thủy (do Kim sinh Thủy). Đây là một món phụ kiện đa dụng, dễ dàng kết hợp với nhiều loại trang phục, từ công sở đến dạo phố.",
       "images": [
         "/assets/products/product_00009.jpeg",
         "/assets/products/product_00002.jpeg"
@@ -81,12 +81,12 @@
       "isNew": true,
       "isSale": false,
       "collectionId": "c1",
-      "material": "Cẩm thạch tự nhiên (Phỉ thúy) loại A",
+      "material": "Cẩm thạch tự nhiên loại A",
       "materialType": "jade",
       "size": "Ni 55.6mm",
       "sku": "JADE-P03",
       "tags": ["cẩm thạch", "phỉ thúy", "vòng tay", "phong thủy", "type A", "xanh băng", "sớ bông"],
-      "description": "Chiếc vòng Phỉ thúy này sở hữu màu \"xanh băng\" trong trẻo và tươi mát, một trong những tông màu rất được ưa chuộng hiện nay. Đặc điểm \"có sớ bông\" là một dấu hiệu của cẩm thạch tự nhiên, tạo nên những họa tiết vân đá độc nhất vô nhị, khẳng định giá trị nguyên bản của sản phẩm. Màu xanh băng mang lại cảm giác sảng khoái, trẻ trung và hiện đại cho người đeo. Với kích thước ni 55.6mm, chiếc vòng này được thiết kế dành cho những người có khung tay nhỏ đến trung bình, đảm bảo sự vừa vặn và thoải mái khi đeo. Theo phong thủy, màu xanh dương và xanh băng thuộc hành Thủy, rất hợp với người mệnh Thủy và mệnh Mộc (do Thủy sinh Mộc). Đây là lựa chọn hoàn hảo cho những ai tìm kiếm một món trang sức hợp thời trang, mang lại năng lượng tích cực và sự tươi mới.",
+      "description": "Chiếc vòng Phỉ thúy này sở hữu màu \"xanh băng\" trong trẻo và tươi mát, một trong những tông màu rất được ưa chuộng hiện nay. Đặc điểm \"có sớ bông\" là một dấu hiệu của cẩm thạch tự nhiên, tạo nên những họa tiết vân đá độc nhất vô nhị, khẳng định giá trị nguyên bản của sản phẩm. Màu xanh băng mang lại cảm giác sảng khoái, trẻ trung và hiện đại cho người đeo. Với kích thước ni 55.6mm, chiếc vòng này được thiết kế dành cho những người có khung tay nhỏ đến trung bình, đảm bảo sự vừa vặn và thoải mái khi đeo. Theo phong thủy, màu xanh dương và xanh băng thuộc hành Thủy, rất hợp với người mệnh Kim và mệnh Mộc (do Thủy sinh Mộc). Đây là lựa chọn hoàn hảo cho những ai tìm kiếm một món trang sức hợp thời trang, mang lại năng lượng tích cực và sự tươi mới.",
       "images": [
         "/assets/products/product_00007.jpeg",
         "/assets/products/product_00004.jpeg",
@@ -134,7 +134,7 @@
       "size": "Co giãn",
       "sku": "JADE-P05",
       "tags": ["cẩm thạch", "chuỗi hạt", "vòng tay", "thời trang"],
-      "description": "Sản phẩm gồm hai chuỗi hạt cẩm thạch mang phong cách trẻ trung, hiện đại và rất linh hoạt. Việc đeo chuỗi hạt theo kiểu xếp lớp (layering) đang là một xu hướng thời trang thịnh hành, tạo điểm nhấn cá tính cho người đeo. Các hạt ngọc được mài tròn đều, có màu xanh lục xen lẫn trắng tươi sáng, mang lại năng lượng tươi mới và tích cực. Vì là dạng chuỗi hạt co giãn, sản phẩm phù hợp với hầu hết các kích cỡ cổ tay, từ nhỏ đến lớn, rất tiện lợi khi chọn làm quà tặng. Tương tự các sản phẩm màu xanh khác, chuỗi hạt này đặc biệt phù hợp với người mệnh Mộc và mệnh Hỏa. Đây là một món phụ kiện đa năng, có thể đeo riêng lẻ hoặc kết hợp cùng đồng hồ, vòng tay khác để tạo ra phong cách độc đáo cho riêng bạn.",
+      "description": "Sản phẩm gồm hai chuỗi hạt cẩm thạch mang phong cách trẻ trung, hiện đại và rất linh hoạt. Việc đeo chuỗi hạt theo kiểu xếp lớp (layering) đang là một xu hướng thời trang thịnh hành, tạo điểm nhấn cá tính cho người đeo. Các hạt ngọc được mài tròn đều, có màu xanh lục xen lẫn trắng tươi sáng, mang lại năng lượng tươi mới và tích cực. Vì là dạng chuỗi hạt co giãn, sản phẩm phù hợp với hầu hết các kích cỡ cổ tay, từ nhỏ đến lớn, rất tiện lợi khi chọn làm quà tặng. Tương tự các sản phẩm màu xanh khác, chuỗi hạt này đặc biệt phù hợp với người mệnh Kim và mệnh Hỏa. Đây là một món phụ kiện đa năng, có thể đeo riêng lẻ hoặc kết hợp cùng đồng hồ, vòng tay khác để tạo ra phong cách độc đáo cho riêng bạn.",
       "images": [
         "/assets/products/product_00001.jpeg"
       ],
@@ -157,7 +157,7 @@
       "size": "Chưa xác định",
       "sku": "JADE-P06",
       "tags": ["cẩm thạch", "phỉ thúy", "vòng tay", "phong thủy", "lavender", "tím"],
-      "description": "Đây là một chiếc vòng cẩm thạch vô cùng đặc biệt và quý hiếm với sắc tím oải hương (lavender) thơ mộng. Cẩm thạch tím thường hiếm gặp hơn cẩm thạch xanh và được giới sưu tầm săn đón bởi vẻ đẹp độc đáo, hoàng gia của nó. Màu tím lavender tượng trưng cho sự lãng mạn, trí tuệ, lòng chung thủy và sự sang trọng một cách thầm lặng. Chiếc vòng trong ảnh có độ bóng cao và màu sắc trải đều, cho thấy đây là một sản phẩm có chất lượng tốt. Dù chưa có kích thước cụ thể, nó phù hợp với những người yêu thích vẻ đẹp độc đáo và muốn khẳng định phong cách riêng. Trong phong thủy, màu tím thuộc hành Hỏa, vì vậy đây là vật phẩm may mắn bậc nhất cho người mệnh Hỏa và cũng tương sinh mạnh mẽ cho người mệnh Thổ (Hỏa sinh Thổ), hứa hẹn mang lại quyền lực, may mắn và tài lộc.",
+      "description": "Đây là một chiếc vòng cẩm thạch vô cùng đặc biệt và quý hiếm với sắc tím oải hương (lavender) thơ mộng. Cẩm thạch tím thường hiếm gặp hơn cẩm thạch xanh và được giới sưu tầm săn đón bởi vẻ đẹp độc đáo, hoàng gia của nó. Màu tím lavender tượng trưng cho sự lãng mạn, trí tuệ, lòng chung thủy và sự sang trọng một cách thầm lặng. Chiếc vòng trong ảnh có độ bóng cao và màu xanh trải đều, cho thấy đây là một sản phẩm có chất lượng tốt. Dù chưa có kích thước cụ thể, nó phù hợp với những người yêu thích vẻ đẹp độc đáo và muốn khẳng định phong cách riêng. Trong phong thủy, màu tím thuộc hành Hỏa, vì vậy đây là vật phẩm may mắn bậc nhất cho người mệnh Hỏa và cũng tương sinh mạnh mẽ cho người mệnh Thổ (Hỏa sinh Thổ), hứa hẹn mang lại quyền lực, may mắn và tài lộc.",
       "images": [
         "/assets/products/product_00006.jpeg"
       ],
@@ -210,6 +210,8 @@
       "logo": "/assets/brands/sjc.png"
     }
   ],
+  "bestSellerProductIds": ["p1", "p3", "p6"],
+  "newArrivalProductIds": ["p2", "p4", "p5"],
   "contact": {
     "address": "123 Đường Trang Sức, Quận 1, TP.HCM",
     "phone": "0909 123 456",

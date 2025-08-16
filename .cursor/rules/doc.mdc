@@ -1,0 +1,14 @@
+---
+description: short description of the rule's purpose
+alwaysApply: false
+---
+# Rule Title 
+main content explain the rule with markdown formating. 
+1. Step by step instructions 
+2. Code example 
+3. Guidelines 
+
+Example: 
+function sayHello(name) {
+  // Implementation following guidelines
+}

@@ -6,8 +6,7 @@ import {
   BestSellerSection,
   NewArrivalSection,
   HighlightSection,
-  TestimonialSection,
-  BrandSection
+  TestimonialSection
 } from './components';
 import './Homepage.css';
 
@@ -26,12 +25,11 @@ const Homepage = React.memo(() => {
   return (
     <div className="homepage">
       <HeroSection />
-      <CollectionsSection />
+      {/* <CollectionsSection /> */}
       <BestSellerSection />
       <NewArrivalSection />
       <HighlightSection />
       <TestimonialSection />
-      <BrandSection />
     </div>
   );
 });

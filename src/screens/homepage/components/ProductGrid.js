@@ -10,6 +10,15 @@ const ProductGrid = React.memo(({ products }) => {
     }).format(price);
   };
 
+  // Handle empty products array
+  if (!products || products.length === 0) {
+    return (
+      <div className="product-grid-empty">
+        <p>Không có sản phẩm nào để hiển thị</p>
+      </div>
+    );
+  }
+
   return (
     <div className="product-grid">
       {products.map((product) => (
@@ -46,9 +55,13 @@ const ProductGrid = React.memo(({ products }) => {
                 {product.isSale && product.oldPrice && (
                   <span className="old-price">{formatPrice(product.oldPrice)}</span>
                 )}
-                <span className="current-price">{formatPrice(product.price)}</span>
+                {product.price ? (
+                  <span className="current-price">{formatPrice(product.price)}</span>
+                ) : (
+                  <span className="current-price">Liên hệ</span>
+                )}
               </div>
-              <button className="add-to-cart-btn">Thêm vào giỏ</button>
+
             </div>
           </div>
         </Link>

@@ -56,6 +56,24 @@ const CollectionPage = React.memo(() => {
   const processedProducts = useMemo(() => {
     let result = [...products];
 
+    // Apply best seller filter if on best-seller page
+    if (location.pathname === '/best-seller') {
+      const bestSellerIds = ['p1', 'p3', 'p6']; // From jewelery-data.json
+      result = result.filter(product => bestSellerIds.includes(product.id));
+    }
+    
+    // Apply new arrivals filter if on new-arrivals page
+    if (location.pathname === '/new-arrivals') {
+      const newArrivalIds = ['p2', 'p4', 'p5']; // From jewelery-data.json
+      result = result.filter(product => newArrivalIds.includes(product.id));
+    }
+    
+    // Apply featured products filter if on featured-products page
+    if (location.pathname === '/featured-products') {
+      // Show all products for featured products page
+      // No additional filtering needed
+    }
+
     // Apply search filter
     if (filters.search) {
       const searchTerm = filters.search.toLowerCase();
@@ -66,21 +84,20 @@ const CollectionPage = React.memo(() => {
       );
     }
 
-    // Apply category filter
-    if (filters.category !== 'all') {
-      result = result.filter(product => product.type === filters.category);
-    }
+
 
     // Apply collection filter
     if (filters.collection !== 'all') {
       result = result.filter(product => product.collectionId === filters.collection);
     }
 
-    // Apply price range filter
-    result = result.filter(product => 
-      product.price >= filters.priceRange[0] && 
-      product.price <= filters.priceRange[1]
-    );
+    // Apply price range filter (include products with null prices)
+    result = result.filter(product => {
+      if (product.price === null || product.price === undefined) {
+        return true; // Include products without prices
+      }
+      return product.price >= filters.priceRange[0] && product.price <= filters.priceRange[1];
+    });
 
     // Apply material filter
     if (filters.material !== 'all') {
@@ -99,6 +116,11 @@ const CollectionPage = React.memo(() => {
       result = result.filter(product => product.isSale);
     }
 
+    // Apply inStock filter
+    if (filters.inStock) {
+      result = result.filter(product => product.inStock !== false);
+    }
+
     // Apply sorting
     result.sort((a, b) => {
       let comparison = 0;
@@ -108,10 +130,10 @@ const CollectionPage = React.memo(() => {
           comparison = a.name.localeCompare(b.name);
           break;
         case 'price_low':
-          comparison = a.price - b.price;
+          comparison = (a.price || 0) - (b.price || 0);
           break;
         case 'price_high':
-          comparison = b.price - a.price;
+          comparison = (b.price || 0) - (a.price || 0);
           break;
         case 'newest':
           comparison = a.isNew === b.isNew ? 0 : a.isNew ? -1 : 1;
@@ -148,6 +170,33 @@ const CollectionPage = React.memo(() => {
     const collectionId = params.get('collection');
     const category = params.get('category');
     
+    // Check if this is the best seller page
+    if (location.pathname === '/best-seller') {
+      return {
+        title: 'Bán chạy nhất',
+        subtitle: 'Khám phá các sản phẩm được yêu thích nhất',
+        breadcrumbItems: [{ title: 'Bán chạy nhất' }]
+      };
+    }
+    
+    // Check if this is the new arrivals page
+    if (location.pathname === '/new-arrivals') {
+      return {
+        title: 'Hàng mới về',
+        subtitle: 'Khám phá các sản phẩm mới nhất',
+        breadcrumbItems: [{ title: 'Hàng mới về' }]
+      };
+    }
+    
+    // Check if this is the featured products page
+    if (location.pathname === '/featured-products') {
+      return {
+        title: 'Sản phẩm nổi bật',
+        subtitle: 'Khám phá tất cả sản phẩm nổi bật của chúng tôi',
+        breadcrumbItems: [{ title: 'Sản phẩm nổi bật' }]
+      };
+    }
+    
     if (collectionId) {
       const collection = collections.find(c => c.id === collectionId);
       return {
@@ -176,7 +225,7 @@ const CollectionPage = React.memo(() => {
       subtitle: 'Khám phá toàn bộ sản phẩm trang sức cao cấp',
       breadcrumbItems: []
     };
-  }, [location.search, collections]);
+  }, [location.pathname, location.search, collections]);
 
   // Event handlers
   const handleFilterChange = useCallback((filterType, value) => {
@@ -214,10 +263,7 @@ const CollectionPage = React.memo(() => {
     console.log('Quick view:', product);
   }, []);
 
-  const handleAddToCart = useCallback((product) => {
-    // TODO: Implement add to cart functionality
-    console.log('Add to cart:', product);
-  }, []);
+
 
   const toggleSidebar = useCallback(() => {
     dispatch(setSidebarCollapsed(!sidebarCollapsed));
@@ -280,9 +326,9 @@ const CollectionPage = React.memo(() => {
 
               {/* Product List */}
               <ProductList
+                products={processedProducts}
                 onProductClick={handleProductClick}
                 onQuickView={handleQuickView}
-                onAddToCart={handleAddToCart}
                 onPageChange={handlePageChange}
                 onPageSizeChange={handlePageSizeChange}
               />

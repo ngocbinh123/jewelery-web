@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { selectBestSellerProducts } from '../../../store/slices/jewelrySlice';
 import ProductGrid from './ProductGrid';
 import { motion } from 'framer-motion';
@@ -22,7 +23,9 @@ const BestSellerSection = React.memo(() => {
         </div>
         <ProductGrid products={bestSellerProducts} />
         <div className="section-actions">
-          <button className="view-all-button">Xem tất cả</button>
+          <Link to="/best-seller" className="view-all-button">
+            Xem tất cả
+          </Link>
         </div>
       </motion.div>
     </section>

@@ -4,7 +4,6 @@ import {
   HeartOutlined, 
   HeartFilled, 
   EyeOutlined, 
-  ShoppingCartOutlined,
   SwapOutlined 
 } from '@ant-design/icons';
 import { useSelector, useDispatch } from 'react-redux';
@@ -32,8 +31,7 @@ const ProductCard = React.memo(({
   showQuickActions = true,
   className = "",
   onProductClick,
-  onQuickView,
-  onAddToCart
+  onQuickView
 }) => {
   const dispatch = useDispatch();
   const wishlist = useSelector(selectWishlist);
@@ -84,10 +82,7 @@ const ProductCard = React.memo(({
     onQuickView?.(product);
   };
 
-  const handleAddToCart = (e) => {
-    e.stopPropagation();
-    onAddToCart?.(product);
-  };
+
 
   const handleProductClick = () => {
     onProductClick?.(product);
@@ -112,11 +107,20 @@ const ProductCard = React.memo(({
       onClick={handleProductClick}
       cover={
         <div className="product-image-container">
-          <div className="product-image-placeholder">
-            <span className="product-type-icon">
-              {getProductIcon()}
-            </span>
-          </div>
+          {product.image ? (
+            <img
+              src={product.image}
+              alt={product.name}
+              className="product-image"
+              loading="lazy"
+            />
+          ) : (
+            <div className="product-image-placeholder">
+              <span className="product-type-icon">
+                {getProductIcon()}
+              </span>
+            </div>
+          )}
           
           {/* Product badges */}
           <div className="product-badges">
@@ -165,18 +169,7 @@ const ProductCard = React.memo(({
           )}
         </div>
       }
-      actions={[
-        <Button
-          key="add-to-cart"
-          type="primary"
-          icon={<ShoppingCartOutlined />}
-          onClick={handleAddToCart}
-          className="add-to-cart-btn"
-          block
-        >
-          Thêm vào giỏ
-        </Button>
-      ]}
+      actions={[]}
     >
       <Meta
         title={
@@ -199,7 +192,7 @@ const ProductCard = React.memo(({
                 </Text>
               )}
               <Text strong className="current-price">
-                {formatPrice(product.price)}
+                {product.price ? formatPrice(product.price) : 'Liên hệ'}
               </Text>
             </div>
             
@@ -221,11 +214,20 @@ const ProductCard = React.memo(({
     >
       <div className="list-content">
         <div className="product-image-container">
-          <div className="product-image-placeholder">
-            <span className="product-type-icon">
-              {getProductIcon()}
-            </span>
-          </div>
+          {product.image ? (
+            <img
+              src={product.image}
+              alt={product.name}
+              className="product-image"
+              loading="lazy"
+            />
+          ) : (
+            <div className="product-image-placeholder">
+              <span className="product-type-icon">
+                {getProductIcon()}
+              </span>
+            </div>
+          )}
           
           <div className="product-badges">
             {product.isNew && <Tag color="green">Mới</Tag>}
@@ -255,7 +257,7 @@ const ProductCard = React.memo(({
               </Text>
             )}
             <Text strong className="current-price">
-              {formatPrice(product.price)}
+              {product.price ? formatPrice(product.price) : 'Liên hệ'}
             </Text>
           </div>
         </div>
@@ -282,14 +284,7 @@ const ProductCard = React.memo(({
               </>
             )}
             
-            <Button
-              type="primary"
-              icon={<ShoppingCartOutlined />}
-              onClick={handleAddToCart}
-              className="add-to-cart-btn"
-            >
-              Thêm vào giỏ
-            </Button>
+
           </Space>
         </div>
       </div>

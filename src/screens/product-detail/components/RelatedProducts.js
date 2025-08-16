@@ -4,8 +4,8 @@ import { Card, Row, Col } from 'antd';
 import { Link } from 'react-router-dom';
 
 const RelatedProducts = ({ related, allProducts }) => {
-  if (!related || !allProducts) return null;
-  const relatedProducts = allProducts.filter((p) => related.includes(p.id));
+  if (!related || !Array.isArray(related) || !allProducts || !Array.isArray(allProducts)) return null;
+  const relatedProducts = allProducts.filter((p) => p && p.id && related.includes(p.id));
   if (relatedProducts.length === 0) return null;
   return (
     <div>
@@ -19,7 +19,9 @@ const RelatedProducts = ({ related, allProducts }) => {
                 cover={<img alt={product.name} src={product.image} style={{ height: 120, objectFit: 'cover' }} />}
                 title={product.name}
               >
-                <div style={{ fontWeight: 700, color: '#d0021b' }}>{product.price.toLocaleString('vi-VN')}₫</div>
+                <div style={{ fontWeight: 700, color: '#d0021b' }}>
+                  {product.price ? `${product.price.toLocaleString('vi-VN')}₫` : 'Liên hệ'}
+                </div>
               </Card>
             </Link>
           </Col>
